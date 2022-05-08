@@ -1,0 +1,175 @@
+#syntax of the confige file 
+#tab_name:<title>Title_text 
+#tab_name:task_text
+#note evry task under a title will belong to that title 
+#example of title --> Recon:<title>Information Gathering 
+#example of task--> Recon:enumerate subdomain with subfinder
+#Always try to arrange tasks in "taps" from largest to smallest in terms of number of tasks
+
+Recon:<title>Information Gathering
+Recon:Manually explore the site
+Recon:Spider/crawl for missed or hidden content
+Recon:Check for files that expose content, such as robots.txt, sitemap.xml, .DS_Store
+Recon:Check the caches of major search engines for publicly accessible sites
+Recon:Check for differences in content based on User Agent 
+Recon:Perform Web Application Fingerprinting
+Recon:Identify technologies used
+Recon:Identify user roles
+Recon:Identify application entry points
+Recon:Identify client-side code
+Recon:Identify multiple versions/channels (e.g. web, mobile web, mobile app, web services)
+Recon:Identify co-hosted and related applications
+Recon:Identify all hostnames and ports
+Recon:Identify third-party hosted content
+Recon:Identify Debug parameters
+Recon:<title>Recon on wildcard domain
+Recon:Run Amass
+Recon:Run Subfinder
+Recon:Run assetfinder
+Recon:Run dnsgen
+Recon:Run massdns
+Recon:Run httprobe
+Recon:Run massdns
+Recon:<title>Scanning
+Recon:Nmap scan
+Recon:Burp crawler
+Recon:ffuf (directory and file fuzzing)
+Recon:hakrawler/gau/paramspider
+Recon:Wayback machine
+Recon:Linkfinder
+Recon:Url with Android application
+Manual check:<title>Manual checking
+Manual check:Shodan
+Manual check:Censys
+Manual check:Google dorks
+Manual check:Pastebin
+Manual check:Github
+Manual check:OSINT
+Manual check:<title>Configuration Management
+Manual check:Check for commonly used application and administrative URLs
+Manual check:Check for old, backup and unreferenced files
+Manual check:Check HTTP methods supported and Cross Site Tracing (XST)
+Manual check:Test file extensions handling
+Manual check:Test for security HTTP headers (e.g. CSP, X-Frame-Options, HSTS)
+Manual check:Test for policies (e.g. Flash, Silverlight, robots)
+Manual check:Test for non-production data in live environment, and vice-versa
+Manual check:Check for sensitive data in client-side code (e.g. API keys, credentials)
+Manual check:<title>Secure Transmission
+Manual check:Check SSL Version, Algorithms, Key length
+Manual check:Check for Digital Certificate Validity (Duration, Signature and CN)
+Manual check:Check credentials only delivered over HTTPS
+Manual check:Check that the login form is delivered over HTTPS
+Manual check:Check session tokens only delivered over HTTPS
+Manual check:Check if HTTP Strict Transport Security (HSTS) in use
+Access control:<title>Authentication
+Access control:Test for user enumeration
+Access control:Test for authentication bypass
+Access control:Test for bruteforce protection
+Access control:Test password quality rules
+Access control:Test remember me functionality
+Access control:Test for autocomplete on password forms/input
+Access control:Test password reset and/or recovery
+Access control:Test password change process
+Access control:Test CAPTCHA
+Access control:Test multi factor authentication
+Access control:Test for logout functionality presence
+Access control:Test for cache management on HTTP (eg Pragma, Expires, Max-age)
+Access control:Test for default logins
+Access control:Test for user-accessible authentication history
+Access control:Test for out-of channel notification of account lockouts and successful password changes
+Access control:Test for consistent authentication across applications with shared authentication schema / SSO
+Access control:<title>Session Management
+Access control:Establish how session management is handled in the application (eg, tokens in cookies, token in URL)
+Access control:Check session tokens for cookie flags (httpOnly and secure)
+Access control:Check session cookie scope (path and domain)
+Access control:Check session cookie duration (expires and max-age)
+Access control:Check session termination after a maximum lifetime
+Access control:Check session termination after relative timeout
+Access control:Check session termination after logout
+Access control:Test to see if users can have multiple simultaneous sessions
+Access control:Test session cookies for randomness
+Access control:Confirm that new session tokens are issued on login, role change and logout
+Access control:Test for consistent session management across applications with shared session management
+Access control:Test for session puzzling
+Access control:Test for CSRF and clickjacking
+Access control:<title>Authorization
+Access control:Test for path traversal
+Access control:Test for bypassing authorization schema
+Access control:Test for vertical Access control problems (a.k.a. Privilege Escalation)
+Access control:Test for horizontal Access control problems (between two users at the same privilege level)
+Access control:Test for missing authorization
+C_S Vulnerability:<title>Data Validation
+C_S Vulnerability:Test for Reflected Cross Site Scripting
+C_S Vulnerability:Test for Stored Cross Site Scripting
+C_S Vulnerability:Test for DOM based Cross Site Scripting
+C_S Vulnerability:Test for Cross Site Flashing
+C_S Vulnerability:Test for HTML Injection
+C_S Vulnerability:Test for SQL Injection
+C_S Vulnerability:Test for LDAP Injection
+C_S Vulnerability:Test for ORM Injection
+C_S Vulnerability:Test for XML Injection
+C_S Vulnerability:Test for XXE Injection
+C_S Vulnerability:Test for SSI Injection
+C_S Vulnerability:Test for XPath Injection
+C_S Vulnerability:Test for XQuery Injection
+C_S Vulnerability:Test for IMAP/SMTP Injection
+C_S Vulnerability:Test for Code Injection
+C_S Vulnerability:Test for Expression Language Injection
+C_S Vulnerability:Test for Command Injection
+C_S Vulnerability:Test for Overflow (Stack, Heap and Integer)
+C_S Vulnerability:Test for Format String
+C_S Vulnerability:Test for incubated vulnerabilities
+C_S Vulnerability:Test for HTTP Splitting/Smuggling
+C_S Vulnerability:Test for HTTP Verb Tampering
+C_S Vulnerability:Test for Open Redirection
+C_S Vulnerability:Test for Local File Inclusion
+C_S Vulnerability:Test for Remote File Inclusion
+C_S Vulnerability:Compare client-side and server-side validation rules
+C_S Vulnerability:Test for NoSQL injection
+C_S Vulnerability:Test for HTTP parameter pollution
+C_S Vulnerability:Test for auto-binding
+C_S Vulnerability:Test for Mass Assignment
+C_S Vulnerability:Test for NULL/Invalid Session Cookie
+C_S Vulnerability:<title>Denial of Service
+C_S Vulnerability:Test for anti-automation
+C_S Vulnerability:Test for account lockout
+C_S Vulnerability:Test for HTTP protocol DoS
+C_S Vulnerability:Test for SQL wildcard DoS
+C_S Vulnerability:<title>Business Logic
+C_S Vulnerability:Test for feature misuse
+C_S Vulnerability:Test for lack of non-repudiation
+C_S Vulnerability:Test for trust relationships
+C_S Vulnerability:Test for integrity of data
+C_S Vulnerability:Test segregation of duties
+Risky functionality:<title>Risky Functionality - File Uploads
+Risky functionality:Test that acceptable file types are whitelisted
+Risky functionality:Test that file size limits, upload frequency and total file counts are defined and are enforced
+Risky functionality:Test that file contents match the defined file type
+Risky functionality:Test that all file uploads have Anti-Virus scanning in-place.
+Risky functionality:Test that unsafe filenames are sanitised
+Risky functionality:Test that uploaded files are not directly accessible within the web root
+Risky functionality:Test that uploaded files are not served on the same hostname/port
+Risky functionality:Test that files and other media are integrated with the authentication and authorisation schemas
+Risky functionality:<title>Risky Functionality - Card Payment
+Risky functionality:Test for known vulnerabilities and configuration issues on Web Server and Web Application
+Risky functionality:Test for default or guessable password
+Risky functionality:Test for non-production data in live environment, and vice-versa
+Risky functionality:Test for Injection vulnerabilities
+Risky functionality:Test for Buffer Overflows
+Risky functionality:Test for Insecure Cryptographic Storage
+Risky functionality:Test for Insufficient Transport Layer Protection
+Risky functionality:Test for Improper Error Handling
+Risky functionality:Test for all vulnerabilities with a CVSS v2 score > 4.0
+Risky functionality:Test for Authentication and Authorization issues
+Risky functionality:Test for CSRF
+Risky functionality:<title>HTML 5
+Risky functionality:Test Web Messaging
+Risky functionality:Test for Web Storage SQL injection
+Risky functionality:Check CORS implementation
+Risky functionality:Check Offline Web Application
+Risky functionality:<title>Cryptography
+Risky functionality:Check if data which should be encrypted is not
+Risky functionality:Check for wrong algorithms usage depending on context
+Risky functionality:Check for weak algorithms usage
+Risky functionality:Check for proper use of salting
+Risky functionality:Check for randomness functions
