@@ -45,7 +45,7 @@ Here’s what you’ll find in this repository:
 
 1. Clone the repository to your local machine:  
    ```bash  
-   git clone https://github.com/your-username/your-repo-name.git  
+   git clone https://github.com/shubhdhungana/bug_bounty_checklist  
    ```  
 
 2. Navigate through the organized folders to find the topic you need.  
